@@ -46,6 +46,12 @@ Value can be found in the published state on the `flow` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `m³/h`.
 
+*Important note:*
+
+*SONOFF tell that the propeller flowmeter used in the device can only measure the water flow sufficient to drive its rotation, specifically a flow rate of at least 2 liters per minute (or 120 liters per hour)*
+
+*As a result, if the flow rate is lower than 0.12 m³/h, it cannot be measured. The `Auto close when water shortage` switch may falsely detect a water shortage, and the `Cyclic quantitative irrigation` function will not be reliable, as it will not be able to count the quantity of water.*
+
 ### Battery (numeric)
 Remaining battery in %.
 Value can be found in the published state on the `battery` property.
